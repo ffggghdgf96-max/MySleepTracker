@@ -1,0 +1,6 @@
+publishing:
+  scripts:
+    - name: Build IPA
+      script: | 
+        xcodebuild archive -scheme MyApp -archivePath MyApp.xcarchive
+        xcodebuild -exportArchive -archivePath MyApp.xcarchive -exportOptionsPlist exportOptions.plist -exportPath .
